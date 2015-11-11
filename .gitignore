@@ -1,2 +1,3 @@
-datasets/*
 playground/*
+datasets/yelp_academic_dataset_review.json
+datasets/yelp_academic_dataset_business.json
