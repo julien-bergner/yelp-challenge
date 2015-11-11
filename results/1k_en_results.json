@@ -1,0 +1,6 @@
+Start:  2015-11-11 13:19:21.714590
+Loaded file:  results/1k_en_reviews_tokenized.json
+Dictionary created:  2015-11-11 13:19:21.832371
+Corpus created:  2015-11-11 13:19:21.929911
+['0.010*food + 0.009*good + 0.009*great + 0.009*place', '0.007*time + 0.006*show + 0.006*one + 0.005*experience']
+End:  2015-11-11 13:20:58.666791

@@ -1,0 +1,6 @@
+Start:  2015-11-11 13:35:58.961766
+Loaded file:  datasets/1review_tokenized.json
+Dictionary created:  2015-11-11 13:35:58.962014
+Corpus created:  2015-11-11 13:35:58.962069
+['0.047*great + 0.034*said + 0.034*good + 0.034*nuf', '0.022*great + 0.022*nuf + 0.022*good + 0.022*said']
+End:  2015-11-11 13:35:59.023202
