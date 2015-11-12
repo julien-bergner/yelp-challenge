@@ -10,7 +10,7 @@ from nltk.stem.porter import PorterStemmer
 import helper
 
 if len(sys.argv) != 3:
-    sys.exit("Usage: filter_py_language.py source_file target_file")
+    sys.exit("Usage: " + sys.argv[0] + " source_file target_file")
 
 print("Start: ", str(datetime.now()))
 
@@ -26,6 +26,7 @@ with source_file as source:
 
     	  # Load review text
         parsed_json = json.loads(review)
+        review_id = parsed_json['review_id']
         raw_review_text = parsed_json['text']
 
         # Remove newline and indent characters
@@ -45,10 +46,15 @@ with source_file as source:
         stop_words = get_stop_words('en')
         stopped_tokens = [i for i in tokens if not i in stop_words]
 
-        # Stem tokens
-        stemmed_tokens = [stemmer.stem(i) for i in stopped_tokens]
+        ## Stem tokens
+        #stemmed_tokens = [stemmer.stem(i) for i in stopped_tokens]
 
-        target_file.write(json.dumps(stopped_tokens))
+        # Dicard everything shorter than two characters
+        final_tokens = [i for i in stopped_tokens if len(i) > 2]
+
+
+        line = { "review_id" : review_id, "tokens" : final_tokens }
+        target_file.write(json.dumps(line))
         target_file.write('\n')
 
 print("End: ", str(datetime.now()))
