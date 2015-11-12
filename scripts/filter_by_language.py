@@ -19,7 +19,8 @@ source_file = open(sys.argv[1], "r")
 target_file_en = open(sys.argv[2], "w")
 target_file_de = open(sys.argv[3], "w")
 print("Source file: ", source_file.name)
-print("Target file: ", target_file.name)
+print("Target file en: ", target_file_en.name)
+print("Target file de: ", target_file_de.name)
 
 with source_file as source:
     for review in source:
