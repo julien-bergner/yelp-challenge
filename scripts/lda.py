@@ -18,7 +18,7 @@ texts = []
 with file as source:
     for review in source:
         prepared_review = json.loads(review)
-        texts.append(prepared_review)
+        texts.append(prepared_review["tokens"])
 
 # turn our tokenized documents into a id <-> term dictionary
 dictionary = corpora.Dictionary(texts)
