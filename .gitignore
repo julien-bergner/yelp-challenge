@@ -1,3 +1,4 @@
 playground/*
 datasets/*
+lda_models/*
 scripts/__pycache__/*
